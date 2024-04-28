@@ -9,10 +9,16 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script> 
 </head>
 
-<body class="h-dvh w-dvh flex justify-center items-center content-center">
+<body class="h-dvh w-dvh flex flex-col justify-center items-center content-center">
 
 
     <h1> Hello World </h1>
+
+    <button hx-get="/getProjects" hx-target="#projects" hx-swap="innerHtml" hx-trigger="click">
+        Get Projects
+    </button>
+
+    <div id="projects"></div>
 
     <script src="./scripts/scripts.js"></script>
 </body>
