@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
-      "module": "ES6",
+      "module": "NodeNext"  ,
       "noImplicitAny": true,
       "removeComments": true,
       "preserveConstEnums": true,
-      "sourceMap": true
+      "sourceMap": true,
+      "target": "ES2020"
     },
     "files": [
-      "./scripts/scripts.ts",
-      "./server/main-server.ts"
+      "public/scripts/scripts.ts",
+      "server/server.ts"
     ]
   }
