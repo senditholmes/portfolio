@@ -12,8 +12,8 @@ app.use(
   })
 );
 
-// ROUTES
-app.get("/getProjects", (req, res) => {
+//DATABASE
+app.get("/openDb", (req, res) => {
   const db = new sqlite3.Database(
     "/Users/djh/Projects/portfolio/db/portfolio.db",
     (err) => {
@@ -23,23 +23,28 @@ app.get("/getProjects", (req, res) => {
       console.log("Connected to portfolio.db SQlite database.");
     }
   );
-
-  db.serialize(() => {
-    db.each(`SELECT * FROM portfolio`, (err, row: any) => {
-      if (err) {
-        console.error(err.message);
-      }
-      res.send(`<div> Project name is: ${row.ProjectName}</div>`);
-    });
-  });
-
-  //CLOSE SNIPPET
   db.close((err) => {
     if (err) {
       return console.error(err.message);
     }
     console.log("Close the database connection.");
   });
+});
+
+// GET ROUTES
+app.get("/home", (req, res) => {
+  console.log(res);
+  res.send(`<div>This is your HERO content</div>`);
+});
+
+app.get("/projects", (req, res) => {
+  res.send(`<div>This is your project content</div>`);
+});
+app.get("/about", (req, res) => {
+  res.send(`<div>This is your about content</div>`);
+});
+app.get("/contact", (req, res) => {
+  res.send(`<div>This is your contact form content</div>`);
 });
 
 // LISTEN

@@ -554,20 +554,40 @@ video {
   --tw-contain-style:  ;
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-end-5 {
+  grid-column-end: 5;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
 .flex {
   display: flex;
 }
 
-.h-dvh {
-  height: 100dvh;
+.grid {
+  display: grid;
 }
 
-.h-screen {
-  height: 100vh;
+.cursor-pointer {
+  cursor: pointer;
 }
 
-.flex-col {
-  flex-direction: column;
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .content-center {
@@ -582,7 +602,22 @@ video {
   justify-content: center;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.justify-items-start {
+  justify-items: start;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.align-middle {
+  vertical-align: middle;
 }

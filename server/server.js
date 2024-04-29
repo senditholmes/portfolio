@@ -6,20 +6,12 @@ const port = 3000;
 app.use(serveStatic("/Users/djh/Projects/portfolio/public", {
     index: ["index.html", "index.htm"],
 }));
-app.get("/getProjects", (req, res) => {
+app.get("/openDb", (req, res) => {
     const db = new sqlite3.Database("/Users/djh/Projects/portfolio/db/portfolio.db", (err) => {
         if (err) {
             return console.error(err.message);
         }
         console.log("Connected to portfolio.db SQlite database.");
-    });
-    db.serialize(() => {
-        db.each(`SELECT * FROM portfolio`, (err, row) => {
-            if (err) {
-                console.error(err.message);
-            }
-            res.send(`<div> Project name is: ${row.ProjectName}</div>`);
-        });
     });
     db.close((err) => {
         if (err) {
@@ -27,6 +19,19 @@ app.get("/getProjects", (req, res) => {
         }
         console.log("Close the database connection.");
     });
+});
+app.get("/home", (req, res) => {
+    console.log(res);
+    res.send(`<div>This is your HERO content</div>`);
+});
+app.get("/projects", (req, res) => {
+    res.send(`<div>This is your project content</div>`);
+});
+app.get("/about", (req, res) => {
+    res.send(`<div>This is your about content</div>`);
+});
+app.get("/contact", (req, res) => {
+    res.send(`<div>This is your contact form content</div>`);
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
