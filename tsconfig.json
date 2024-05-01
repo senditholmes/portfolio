@@ -8,7 +8,7 @@
       "target": "ES2020"
     },
     "files": [
-      "public/scripts/scripts.ts",
-      "server/server.ts"
+      "./app/public/scripts/scripts.ts",
+      "./app/server.ts"
     ]
   }
