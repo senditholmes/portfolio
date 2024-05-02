@@ -2,13 +2,14 @@ import express from "express";
 import sqlite3 from "sqlite3";
 const app = express();
 const port = 3000;
-app.use(express.static("public"));
+app.set("view engine", "ejs");
+app.set("views", "app/public/views");
+app.use(express.static("app/public"));
 app.get("/", (req, res) => {
-    console.log("Heard your get request bruv");
-    res.send(`<div>HERO CONTENT</div>`);
+    res.render("index");
 });
 app.get("/home", (req, res) => {
-    res.send(`<div>HERO CONTENT</div>`);
+    res.send("<div>This will eventually be a template with hero content in it!</div>");
 });
 app.get("/projects", (req, res) => {
     res.send(`<div>This is your project content</div>`);
@@ -20,7 +21,7 @@ app.get("/contact", (req, res) => {
     res.send(`<div>This is your contact form content</div>`);
 });
 app.get("/downloadcv", (req, res) => {
-    res.download("./public/assets/filesToSend/SoftwareCV.pages");
+    res.redirect("/assets/filesToSend/SoftwareCV.pages");
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

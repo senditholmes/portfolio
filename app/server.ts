@@ -5,16 +5,19 @@ const app = express();
 const port = 3000;
 
 // MIDDLEWARE
-app.use(express.static("public"));
+app.set("view engine", "ejs");
+app.set("views", "app/public/views");
+app.use(express.static("app/public"));
 
 // GET ROUTES
 app.get("/", (req, res) => {
-  console.log("Heard your get request bruv");
-  res.send(`<div>HERO CONTENT</div>`);
+  res.render("index");
 });
 
 app.get("/home", (req, res) => {
-  res.send(`<div>HERO CONTENT</div>`);
+  res.send(
+    "<div>This will eventually be a template with hero content in it!</div>"
+  );
 });
 
 app.get("/projects", (req, res) => {
@@ -28,8 +31,9 @@ app.get("/contact", (req, res) => {
 });
 
 // POST
+// DOESNT WORK WITH AJAX REQUESTS FFS!
 app.get("/downloadcv", (req, res) => {
-  res.download("./public/assets/filesToSend/SoftwareCV.pages");
+  res.redirect("/assets/filesToSend/SoftwareCV.pages");
 });
 
 // LISTEN
