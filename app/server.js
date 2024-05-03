@@ -20,8 +20,8 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
     res.send(`<div>This is your contact form content</div>`);
 });
-app.get("/downloadcv", (req, res) => {
-    res.redirect("/assets/filesToSend/SoftwareCV.pages");
+app.post("/downloadcv", (req, res) => {
+    res.redirect("assets/filesToSend/SoftwareCV.pdf");
 });
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

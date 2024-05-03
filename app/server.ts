@@ -31,9 +31,8 @@ app.get("/contact", (req, res) => {
 });
 
 // POST
-// DOESNT WORK WITH AJAX REQUESTS FFS!
-app.get("/downloadcv", (req, res) => {
-  res.redirect("/assets/filesToSend/SoftwareCV.pages");
+app.post("/downloadcv", (req, res) => {
+  res.redirect("assets/filesToSend/SoftwareCV.pdf");
 });
 
 // LISTEN
