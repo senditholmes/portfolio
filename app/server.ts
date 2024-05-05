@@ -30,9 +30,8 @@ app.get("/contact", (req, res) => {
   res.send(`<div>This is your contact form content</div>`);
 });
 
-// POST
-app.post("/downloadcv", (req, res) => {
-  res.redirect("assets/filesToSend/SoftwareCV.pdf");
+app.get("/downloadCv", (req, res) => {
+  res.download("app/public/assets/filesToSend/SoftwareCV.pdf");
 });
 
 // LISTEN

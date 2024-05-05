@@ -62,7 +62,11 @@
         </li>
       </ul>
 
-      <form class="flex ml-auto items-center" hx-post="/downloadcv">
+      <form
+        class="flex ml-auto items-center cursor-pointer"
+        method="get"
+        action="/downloadCv"
+      >
         <button type="submit">Download Button</button>
       </form>
     </nav>
