@@ -1,9 +1,8 @@
-/* CREATE TABLE portfolio (
-   id INT,
-   ProjectName TEXT,
-   Type TEXT,
-   PRIMARY KEY(id)
-); */
-
-/* INSERT INTO portfolio ( ProjectName, Type)
-VALUES( 'TESTPROJECT',	'TYPESCRIPT' ); */
+-- CREATE TABLE Projects (
+--    id INTEGER,
+--    ProjectName TEXT,
+--    Description TEXT,
+--    Type TEXT,
+--    Url TEXT,
+--    PRIMARY KEY(id)
+-- );
