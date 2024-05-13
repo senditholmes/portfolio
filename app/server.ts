@@ -1,6 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import { Octokit } from "octokit";
+import { join } from "path";
 
 const app = express();
 const port = process.env.PORT;
@@ -8,8 +9,15 @@ const octokit = new Octokit({
   auth: process.env.ACCESS_TOKEN,
 });
 
+interface Repo {
+  name: string;
+  url: string;
+  created_at: string;
+  language: string;
+}
 // MIDDLEWARE
 app.use(express.static("./public"));
+app.use(express.json());
 
 // ROUTES
 app.get("/home", (req, res) => {
@@ -17,18 +25,29 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/projects", (req, res) => {
-  console.log(`HTMX REQUEST RECEIVED`);
+  console.log(`REPO REQUEST RECEIVED`);
 
   async function getRepos() {
     try {
-      const repos = await octokit.request("GET /users/{user}/repos", {
+      const repoResponse = await octokit.request("GET /users/{user}/repos", {
         headers: {
           "X-GitHub-Api-Version": "2022-11-28",
         },
         user: "senditholmes",
       });
-      res.send(`<div> Projects test</div>`);
-      console.log(repos);
+      const repos: Repo[] = repoResponse.data;
+
+      res.send(`
+      <ul>
+   
+      ${repos
+        .map(
+          (repo) =>
+            `<li>${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at} </li>`
+        )
+        .join("")}
+      </ul>
+      `);
     } catch (error) {
       console.log(error);
     }

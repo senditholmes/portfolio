@@ -7,21 +7,29 @@ const octokit = new Octokit({
     auth: process.env.ACCESS_TOKEN,
 });
 app.use(express.static("./public"));
+app.use(express.json());
 app.get("/home", (req, res) => {
     res.send(`<div> Hero </div>`);
 });
 app.get("/projects", (req, res) => {
-    console.log(`HTMX REQUEST RECEIVED`);
+    console.log(`REPO REQUEST RECEIVED`);
     async function getRepos() {
         try {
-            const repos = await octokit.request("GET /users/{user}/repos", {
+            const repoResponse = await octokit.request("GET /users/{user}/repos", {
                 headers: {
                     "X-GitHub-Api-Version": "2022-11-28",
                 },
                 user: "senditholmes",
             });
-            res.send(`<div> Projects test</div>`);
-            console.log(repos);
+            const repos = repoResponse.data;
+            res.send(`
+      <ul>
+   
+      ${repos
+                .map((repo) => `<li>${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at} </li>`)
+                .join("")}
+      </ul>
+      `);
         }
         catch (error) {
             console.log(error);
