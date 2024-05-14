@@ -24,8 +24,7 @@ app.get("/projects", (req, res) => {
             const repos = repoResponse.data;
             res.send(`
       <ul>
-   
-      ${repos
+        ${repos
                 .map((repo) => `<li>${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at} </li>`)
                 .join("")}
       </ul>
@@ -33,12 +32,60 @@ app.get("/projects", (req, res) => {
         }
         catch (error) {
             console.log(error);
+            res.send(`<div>Unable to fetch repos</div>`);
         }
     }
     getRepos();
 });
 app.get("/about", (req, res) => {
-    res.send(`<div> About </div>`);
+    res.send(`
+  <div class="flex flex-col">
+  <h1 class="pb-3">Daniel Holmes - Fullstack Engineer</h1>
+  <ul class="flex">
+    <li>
+      <h2>Frontend</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
+        reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
+        neque sunt!
+      </p>
+    </li>
+
+    <li>
+      <h2>Backend</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
+        reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
+        neque sunt!
+      </p>
+    </li>
+
+    <li>
+      <h2>Data Analysis and Database Management</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
+        reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
+        neque sunt!
+      </p>
+    </li>
+
+    <li>
+      <h2>Teaching Professional</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
+        reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
+        neque sunt!
+      </p>
+    </li>
+  </ul>
+</div>
+
+   
+  `);
 });
 app.get("/contact", (req, res) => {
     res.send(`<div> Contact </div>`);
