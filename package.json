@@ -5,12 +5,15 @@
   "description": "website portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind-setup": "tailwindcss -i ./app/public/css/input.css -o ./app/public/css/output.css --watch",
+    "typescript-setup": "tsc -watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "htmx": "^0.0.2",

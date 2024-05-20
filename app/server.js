@@ -10,7 +10,7 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded());
 app.get("/home", (req, res) => {
-    res.send(`<div> Hero </div>`);
+    res.send(heroContent);
 });
 app.get("/projects", (req, res) => {
     console.log(`REPO REQUEST RECEIVED`);
@@ -38,15 +38,12 @@ app.get("/projects", (req, res) => {
     }
     getRepos();
 });
-app.get("/about", (req, res) => {
-    res.send(about_template);
-});
 app.get("/contact", (req, res) => {
-    res.send(contact_form);
+    res.send(contactForm);
 });
 app.post("/contact", (req, res) => {
     const formUserInput = req.body;
-    res.send(form_submission_thankyou);
+    res.send(formSubmissionThankyou);
 });
 app.get("/downloadCv", (req, res) => {
     res.download("./public/assets/filesToSend/SoftwareCV.pdf");
@@ -54,53 +51,7 @@ app.get("/downloadCv", (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
-const about_template = `
-<div class="flex flex-col">
-<h1 class="pb-3">Daniel Holmes - Fullstack Engineer</h1>
-<ul class="flex">
-  <li>
-    <h2>Frontend</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-      molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
-      reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
-      neque sunt!
-    </p>
-  </li>
-
-  <li>
-    <h2>Backend</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-      molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
-      reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
-      neque sunt!
-    </p>
-  </li>
-
-  <li>
-    <h2>Data Analysis and Database Management</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-      molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
-      reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
-      neque sunt!
-    </p>
-  </li>
-
-  <li>
-    <h2>Teaching Professional</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-      molestias quam non deserunt atque inventore? Modi ducimus dolore placeat
-      reiciendis, accusamus eveniet alias obcaecati cum doloremque fuga, ut,
-      neque sunt!
-    </p>
-  </li>
-</ul>
-</div>
-`;
-const contact_form = `<form hx-post="/contact" hx-trigger="submit" hx-target="#display-content" hx-swap="beforeend">
+const contactForm = `<form hx-post="/contact" hx-trigger="submit" hx-target="#display-content" hx-swap="beforeend">
 <div>
   <label for="name">Name</label>
   <input name="name" type="text" id="name" required />
@@ -127,7 +78,42 @@ const contact_form = `<form hx-post="/contact" hx-trigger="submit" hx-target="#d
 </div>
 
 <button type="submit">Request More info</button>
-</form>
-`;
-const form_submission_thankyou = `<div>Thanks for contacting me. I will get back to you asap!</div>`;
+</form>`;
+const formSubmissionThankyou = `<div>Thanks for contacting me. I will get back to you asap!</div>`;
+const heroContent = `
+<h1 class="flex self-center">Daniel J Holmes</h1>
+      <h2 class="flex self-center">Fullstack Developer | Software Engineer</h2>
+      <div class="flex flex-col self-center">
+        <h3>Frontend</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in
+          provident numquam facilis odio possimus excepturi nam illo illum
+          asperiores vel est tempora quasi sunt perspiciatis eaque, nihil
+          doloribus dolores.
+        </p>
+
+        <h3>Backend</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+          accusantium reiciendis, et dolor vel excepturi provident totam
+          pariatur at tempore delectus! Debitis fugit libero aperiam? Optio ex
+          et recusandae officia.
+        </p>
+
+        <h3>Speciality</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
+          temporibus odio doloribus! Unde voluptatum, enim autem ipsum quos
+          pariatur officia architecto molestiae? Corporis non ducimus tenetur
+          itaque molestiae quaerat aliquam?
+        </p>
+
+        <h3>Teaching Professional</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus architecto commodi reiciendis accusamus ab consequuntur
+          tempora eaque ut dolores vitae illo mollitia laudantium velit, tenetur
+          veritatis reprehenderit! Voluptates, repellendus natus!
+        </p>
+      </div>`;
 //# sourceMappingURL=server.js.map

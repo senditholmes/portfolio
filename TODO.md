@@ -1,10 +1,13 @@
-# CONTACT
+# TODO
 
-MAKE A BASIC FORM AND SEND IT TO SERVER:
+## FOOTER
 
-- Name - Company - Contact Information - Message - Integrate into database?
-  DONE []
+BASIC FOOTER DESIGN []
+Logo in middle, github icon, insta icon, linkedIn icon to the left. jargon bottom right.
 
-# HERO
+### PROJECT
 
-CREATE A BASIC HERO PAGE []
+Make basic card styling []
+Style projects []
+
+

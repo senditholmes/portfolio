@@ -3,15 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="”icon”" href="“favicon.ico”" />
+    <title>Daniel J Holmes | Portfolio</title>
+    <link rel="icon" href="/app/favicon.ico?v=2" />
     <link rel="stylesheet" href="css/output.css" />
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
   <body>
-    <div id="grid-wrapper"></div>
-
     <!-- NAVBAR -->
     <nav class="flex flex-row p-5">
       <ul class="flex justify-items-start gap-5">
@@ -19,24 +17,13 @@
           <img
             class="cursor-pointer"
             src="./assets/images/frowning.png"
-            width="100"
-            height="100"
+            width="150"
+            height="150"
             hx-get="/home"
             hx-trigger="click"
             hx-swap="innerHtml"
             hx-target="#display-content"
           />
-        </li>
-        <li class="flex">
-          <button
-            class="align-middle"
-            hx-get="/about"
-            hx-target="#display-content"
-            hx-swap="innerHtml"
-            hx-trigger="click"
-          >
-            About Me
-          </button>
         </li>
         <li class="flex">
           <button
@@ -64,22 +51,59 @@
       </ul>
 
       <form
-        class="flex ml-auto items-center cursor-pointer"
+        class="flex items-center cursor-pointer ml-auto mr-10"
         method="get"
         action="/downloadCv"
       >
-        <button type="submit">Download Button</button>
+        <button type="submit" class="flex flex-col items-center content-center">
+          Resume
+          <img src="./assets/icons/box-arrow-down.svg" width="25" />
+        </button>
       </form>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <div
-      id="display-content"
-      class="flex col-start-2 col-end-5 justify-center content-center self-center ml-10 mr-10"
-    >
-      ORIGINAL HERO CONTENT
+    <div id="display-content" class="flex h-dvh gap-8 ml-12 mr-12">
+      <h1 class="flex self-center">Daniel J Holmes</h1>
+      <h2 class="flex self-center">Fullstack Developer | Software Engineer</h2>
+      <div class="flex flex-col self-center">
+        <h3>Frontend</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in
+          provident numquam facilis odio possimus excepturi nam illo illum
+          asperiores vel est tempora quasi sunt perspiciatis eaque, nihil
+          doloribus dolores.
+        </p>
+
+        <h3>Backend</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+          accusantium reiciendis, et dolor vel excepturi provident totam
+          pariatur at tempore delectus! Debitis fugit libero aperiam? Optio ex
+          et recusandae officia.
+        </p>
+
+        <h3>Speciality</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
+          temporibus odio doloribus! Unde voluptatum, enim autem ipsum quos
+          pariatur officia architecto molestiae? Corporis non ducimus tenetur
+          itaque molestiae quaerat aliquam?
+        </p>
+
+        <h3>Teaching Professional</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus architecto commodi reiciendis accusamus ab consequuntur
+          tempora eaque ut dolores vitae illo mollitia laudantium velit, tenetur
+          veritatis reprehenderit! Voluptates, repellendus natus!
+        </p>
+      </div>
     </div>
 
     <!-- FOOTER -->
+    <footer class="flex content-center align-middle justify-center mt-4">
+      <div>Github Icon, Instagram Icon, Frontendmentor, Leetcode</div>
+    </footer>
   </body>
 </html>
