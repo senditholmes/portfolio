@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 /*
 ! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
 */
@@ -446,7 +448,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -500,7 +502,7 @@ video {
   --tw-contain-style:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -554,106 +556,122 @@ video {
   --tw-contain-style:  ;
 }
 
-.ml-12 {
+.ml-12{
   margin-left: 3rem;
 }
 
-.ml-auto {
+.ml-auto{
   margin-left: auto;
 }
 
-.mr-10 {
+.mr-10{
   margin-right: 2.5rem;
 }
 
-.mr-12 {
+.mr-12{
   margin-right: 3rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-12 {
+.mt-12{
   margin-top: 3rem;
 }
 
-.flex {
+.flex{
   display: flex;
 }
 
-.h-dvh {
-  height: 100dvh;
+.size-11{
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
-.h-\[40rem\] {
-  height: 40rem;
-}
-
-.h-\[42rem\] {
-  height: 42rem;
-}
-
-.h-\[36rem\] {
-  height: 36rem;
-}
-
-.h-\[34rem\] {
-  height: 34rem;
-}
-
-.h-\[32rem\] {
+.h-\[32rem\]{
   height: 32rem;
 }
 
-.cursor-pointer {
+.cursor-pointer{
   cursor: pointer;
 }
 
-.flex-row {
+.flex-row{
   flex-direction: row;
 }
 
-.flex-col {
+.flex-col{
   flex-direction: column;
 }
 
-.content-center {
+.content-center{
   align-content: center;
 }
 
-.items-center {
+.items-center{
   align-items: center;
 }
 
-.justify-center {
+.justify-center{
   justify-content: center;
 }
 
-.justify-items-start {
+.justify-items-start{
   justify-items: start;
 }
 
-.gap-5 {
+.gap-5{
   gap: 1.25rem;
 }
 
-.gap-8 {
+.gap-8{
   gap: 2rem;
 }
 
-.self-center {
+.self-center{
   align-self: center;
 }
 
-.p-5 {
+.p-5{
   padding: 1.25rem;
 }
 
-.align-middle {
+.align-middle{
   vertical-align: middle;
+}
+
+.font-text{
+  font-family: Assistant, sans-serif;
+}
+
+.font-header{
+  font-family: Rajdhani, sans-serif;
+}
+
+.font-main{
+  font-family: Ubuntu, sans-serif;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-extrabold{
+  font-weight: 800;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
