@@ -556,6 +556,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .ml-12{
   margin-left: 3rem;
 }
@@ -576,17 +580,24 @@ video {
   margin-top: 3rem;
 }
 
+.mr-auto{
+  margin-right: auto;
+}
+
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.mr-5{
+  margin-right: 1.25rem;
+}
+
 .flex{
   display: flex;
 }
 
-.size-11{
-  width: 2.75rem;
-  height: 2.75rem;
-}
-
-.h-\[32rem\]{
-  height: 32rem;
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .cursor-pointer{
@@ -637,10 +648,6 @@ video {
   vertical-align: middle;
 }
 
-.font-text{
-  font-family: Assistant, sans-serif;
-}
-
 .font-header{
   font-family: Rajdhani, sans-serif;
 }
@@ -649,9 +656,8 @@ video {
   font-family: Ubuntu, sans-serif;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.font-text{
+  font-family: Assistant, sans-serif;
 }
 
 .text-4xl{
