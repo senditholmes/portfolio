@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
-  <body class="font-text">
+  <body class="font-body ml-20 mr-20">
     <!-- NAVBAR -->
     <nav class="flex p-5 font-primary font-bold font-header">
       <ul class="flex flex-1 align-middle content-center items-center gap-5">
@@ -22,7 +22,9 @@
           />
         </li>
 
-        <li class="flex mr-auto">Current Project | Current App</li>
+        <li class="flex mr-auto rounded-full bg-skyblue p-3">
+          Current Project | Current App
+        </li>
 
         <li>
           <svg
@@ -83,70 +85,57 @@
             />
           </svg>
         </li>
-        <form
-          class="flex items-center cursor-pointer"
-          method="get"
-          action="/downloadCv"
-        >
-          <button
-            type="submit"
-            class="flex flex-col items-center content-center mr-5"
-          >
-            <img src="./assets/icons/box-arrow-down.svg" width="40" />
-          </button>
-        </form>
       </ul>
     </nav>
 
     <!-- MAIN CONTENT -->
-    <div id="display-content" class="flex flex-col gap-8 ml-12 mr-12">
-      <h1 class="flex self-center font-main font-extrabold text-4xl">
-        Daniel J Holmes
-      </h1>
-      <h2 class="flex self-center font-header font-semibold text-lg">
-        Fullstack Developer | Software Engineer
-      </h2>
-      <div class="flex flex-col self-center">
-        <h3>Frontend</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio in
-          provident numquam facilis odio possimus excepturi nam illo illum
-          asperiores vel est tempora quasi sunt perspiciatis eaque, nihil
-          doloribus dolores.
-        </p>
+    <div id="display-content" class="flex flex-col gap-8">
+      <div class="flex flex-col">
+        <h1 class="flex self-center font-main font-extrabold text-4xl">
+          Daniel J Holmes
+        </h1>
+        <h2
+          class="flex self-center font-header font-semibold text-lg underline decoration-orange underline-offset-4 mb-10"
+        >
+          Fullstack Developer | Software Engineer
+        </h2>
+      </div>
+      <div class="grid grid-cols-4 grid-rows-4">
+        <div class="col-start-1 col-span-2">
+          <h3 class="font-header text-xl font-bold">Frontend</h3>
+          <p>I build websites utilising all the main frontend technologies.</p>
+          <p>HTML5, CSS, JS, TypeScript, React, HTMX</p>
+        </div>
 
-        <h3>Backend</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-          accusantium reiciendis, et dolor vel excepturi provident totam
-          pariatur at tempore delectus! Debitis fugit libero aperiam? Optio ex
-          et recusandae officia.
-        </p>
+        <div class="col-start-3 col-span-2 row-start-2 text-right">
+          <h3 class="font-header text-xl font-bold">Backend</h3>
+          <p>I manage the server side logic with popular backend frameworks.</p>
+          <p>Node, NPM, Django.</p>
+        </div>
 
-        <h3>General Skills</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
-          temporibus odio doloribus! Unde voluptatum, enim autem ipsum quos
-          pariatur officia architecto molestiae? Corporis non ducimus tenetur
-          itaque molestiae quaerat aliquam?
-        </p>
+        <div class="col-start-1 col-span-2 row-start-3">
+          <h3 class="font-header text-xl font-bold">General Programming</h3>
+          <p>I utlize version control and perform data analysis.</p>
+          <p>
+            Github, CLI, Python (Pandas), CSGO, Google Data Analytics, IBM Data
+            Analytics
+          </p>
+        </div>
 
-        <h3>Teaching Professional</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus architecto commodi reiciendis accusamus ab consequuntur
-          tempora eaque ut dolores vitae illo mollitia laudantium velit, tenetur
-          veritatis reprehenderit! Voluptates, repellendus natus!
-        </p>
+        <div class="col-start-3 col-span-2 row-start-4 text-right">
+          <h3 class="font-header text-xl font-bold">Teaching Professional</h3>
+          <p>I am a certified teacher with 6 years of experience.</p>
+          <p>TEFL, TESOL, PGCE</p>
+        </div>
       </div>
 
-      <div
+      <!-- <div
         id="project-container"
         hx-get="/projects"
         hx-target="#project-container"
         hx-swap="innerHtml"
         hx-trigger="load"
-      ></div>
+      ></div> -->
 
       <form
         hx-post="/contact"
@@ -187,6 +176,18 @@
     <footer class="flex content-center align-middle justify-center mt-12 mb-6">
       <ul>
         <li>This is a footer item</li>
+        <form
+          class="flex items-center cursor-pointer"
+          method="get"
+          action="/downloadCv"
+        >
+          <button
+            type="submit"
+            class="flex flex-col items-center content-center mr-5"
+          >
+            <img src="./assets/icons/box-arrow-down.svg" width="40" />
+          </button>
+        </form>
 
         <li>And so is this...</li>
       </ul>
