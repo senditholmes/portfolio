@@ -45,14 +45,14 @@ app.get("/projects", (req, res) => {
       const repos: Repo[] = repoResponse.data;
 
       res.send(`
-      <ul>
+      
         ${repos
           .map(
             (repo) =>
-              `<li>${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at}</li>`
+              `<li class="h-28 flex flex-col flex-wrap">${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at}</li>`
           )
           .join("")}
-      </ul>
+      
       `);
     } catch (error) {
       console.log(error);

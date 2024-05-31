@@ -129,13 +129,14 @@
         </div>
       </div>
 
-      <!-- <div
-        id="project-container"
+      <div
         hx-get="/projects"
         hx-target="#project-container"
         hx-swap="innerHtml"
         hx-trigger="load"
-      ></div> -->
+      >
+        <ul class="grid grid-cols-4 gap-5" id="project-container"></ul>
+      </div>
 
       <form
         hx-post="/contact"
@@ -149,7 +150,7 @@
         </div>
 
         <div>
-          <label for="phone">Phone*</label>
+          <label for="phone">Phone</label>
           <input name="phone" type="text" id="phone" />
         </div>
 
