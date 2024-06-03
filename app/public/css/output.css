@@ -616,6 +616,19 @@ video {
   display: grid;
 }
 
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.w-28{
+  width: 7rem;
+}
+
+.w-48{
+  width: 12rem;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -634,10 +647,6 @@ video {
 
 .flex-col{
   flex-direction: column;
-}
-
-.flex-wrap{
-  flex-wrap: wrap;
 }
 
 .content-center{
@@ -662,6 +671,19 @@ video {
 
 .self-center{
   align-self: center;
+}
+
+.text-wrap{
+  text-wrap: wrap;
+}
+
+.break-normal{
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.break-words{
+  overflow-wrap: break-word;
 }
 
 .rounded-full{

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel J Holmes | Portfolio</title>
     <link rel="icon" href="/app/favicon.ico?v=2" />
-    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="/css/output.css" />
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
@@ -115,9 +115,12 @@
 
         <div class="col-start-1 col-span-2 row-start-3">
           <h3 class="font-header text-xl font-bold">General Programming</h3>
-          <p>I utlize version control and perform data analysis.</p>
           <p>
-            Github, CLI, Python (Pandas), CSGO, Google Data Analytics, IBM Data
+            I understand version control, algorithms, data structures, and
+            different programming approaches.
+          </p>
+          <p>
+            Github, CLI, Python (Pandas), CS5O, Google Data Analytics, IBM Data
             Analytics
           </p>
         </div>
@@ -129,14 +132,19 @@
         </div>
       </div>
 
-      <div
-        hx-get="/projects"
-        hx-target="#project-container"
-        hx-swap="innerHtml"
-        hx-trigger="load"
-      >
-        <ul class="grid grid-cols-4 gap-5" id="project-container"></ul>
-      </div>
+      <ul class="grid grid-cols-4 gap-5">
+        <% repos.forEach((repo)=> { %>
+
+        <li class="flex flex-col flex-1">
+          <h2><%= repo.name %></h2>
+          <p class="break-words">
+            <a href="<%= repo.url %>" target="#"><%= repo.url %> </a>
+          </p>
+          <p><%= repo.created_at %></p>
+          <p><%= repo.language %></p>
+        </li>
+        <% }) %>
+      </ul>
 
       <form
         hx-post="/contact"

@@ -26,42 +26,36 @@ interface FormSchema {
 // MIDDLEWARE
 app.use(express.static("public"));
 app.use(express.json());
-app.use(express.urlencoded());
+app.set("view engine", "ejs");
 
 // ROUTES
 
-// Projects
-app.get("/projects", (req, res) => {
-  console.log(`REPO REQUEST RECEIVED`);
-
-  async function getRepos() {
-    try {
-      const repoResponse = await octokit.request("GET /users/{user}/repos", {
-        headers: {
-          "X-GitHub-Api-Version": "2022-11-28",
-        },
-        user: "senditholmes",
-      });
-      const repos: Repo[] = repoResponse.data;
-
-      res.send(`
-      
-        ${repos
-          .map(
-            (repo) =>
-              `<li class="h-28 flex flex-col flex-wrap">${repo.name}, ${repo.language}, ${repo.url}, ${repo.created_at}</li>`
-          )
-          .join("")}
-      
-      `);
-    } catch (error) {
-      console.log(error);
-      res.send(`<div>Unable to fetch repos</div>`);
-    }
+app.get("/", async (req, res) => {
+  try {
+    const repoResponse = await octokit.request("GET /users/{user}/repos", {
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      user: "senditholmes",
+    });
+    var repos: Repo[] = repoResponse.data;
+  } catch (error) {
+    console.log(error);
   }
 
-  getRepos();
+  if (repos) {
+    repos.forEach((repo) => {
+      repo.url = "https://github.com" + repo.url.substring(28, repo.url.length);
+      repo.created_at = repo.created_at.substring(0, 10);
+    });
+    res.render("pages/index", { repos });
+  } else {
+    res.render("pages/index");
+  }
 });
+
+// Projects
+app.get("/projects", (req, res) => {});
 
 // Contact Form
 app.post("/contact", (req, res) => {
