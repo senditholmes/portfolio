@@ -103,14 +103,14 @@
       <div class="grid grid-cols-4 grid-rows-4">
         <div class="col-start-1 col-span-2">
           <h3 class="font-header text-xl font-bold">Frontend</h3>
-          <p>I build websites utilising all the main frontend technologies.</p>
+          <p>I build websites using all the main frontend technologies.</p>
           <p>HTML5, CSS, JS, TypeScript, React, HTMX</p>
         </div>
 
         <div class="col-start-3 col-span-2 row-start-2 text-right">
           <h3 class="font-header text-xl font-bold">Backend</h3>
           <p>I manage the server side logic with popular backend frameworks.</p>
-          <p>Node, NPM, Django.</p>
+          <p>Node, NPM, Django, SQL.</p>
         </div>
 
         <div class="col-start-1 col-span-2 row-start-3">
@@ -147,6 +147,7 @@
       </ul>
 
       <form
+        class="w-96 flex flex-col flex-1 justify-center self-center gap-2"
         hx-post="/contact"
         hx-trigger="submit"
         hx-target="#display-content"
@@ -168,16 +169,11 @@
         </div>
 
         <div>
-          <label for="comment">Comment</label>
-          <input
-            name="comment"
-            type="text"
-            id="comment"
-            placeholder="Please tell me a little bit about your request."
-          />
+          <label for="comment">Message</label>
+          <input name="comment" type="text" id="comment" />
         </div>
 
-        <button type="submit">Request More info</button>
+        <button type="submit">Contact Me!</button>
       </form>
     </div>
 

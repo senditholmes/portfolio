@@ -69,6 +69,10 @@ app.get("/downloadCv", (req, res) => {
   res.download("./public/assets/filesToSend/SoftwareCV.pdf");
 });
 
+app.post("/message", (req, res) => {
+  return;
+});
+
 // SERVER START
 
 app.listen(port, () => {
