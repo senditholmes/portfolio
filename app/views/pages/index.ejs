@@ -88,8 +88,9 @@
       </ul>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- DISPLAY GRID -->
     <div id="display-content" class="flex flex-col gap-8">
+      <!-- HERO SECTION -->
       <div class="flex flex-col">
         <h1 class="flex self-center font-main font-extrabold text-4xl">
           Daniel J Holmes
@@ -100,6 +101,8 @@
           Fullstack Developer | Software Engineer
         </h2>
       </div>
+
+      <!-- ABOUT SECTION-->
       <div class="grid grid-cols-4 grid-rows-4">
         <div class="col-start-1 col-span-2">
           <h3 class="font-header text-xl font-bold">Frontend</h3>
@@ -132,11 +135,12 @@
         </div>
       </div>
 
-      <ul class="grid grid-cols-4 gap-5">
+      <!-- REPOS -->
+      <ul class="grid grid-cols-4 gap-5 pt-10 pb-10">
         <% repos.forEach((repo)=> { %>
 
         <li class="flex flex-col flex-1">
-          <h2><%= repo.name %></h2>
+          <h3><%= repo.name %></h3>
           <p class="break-words">
             <a href="<%= repo.url %>" target="#"><%= repo.url %> </a>
           </p>
@@ -146,56 +150,102 @@
         <% }) %>
       </ul>
 
-      <form
-        class="w-96 flex flex-col flex-1 justify-center self-center gap-2"
-        hx-post="/contact"
-        hx-trigger="submit"
-        hx-target="#display-content"
-        hx-swap="beforeend"
+      <!-- FORM -->
+      <div
+        class="flex flex-col justify-center border-solid border-2 border-sky-500 w-[600px] self-center"
       >
-        <div>
-          <label for="name">Name</label>
-          <input name="name" type="text" id="name" required />
+        <div class="flex flex-col justify-center self-center">
+          <h2 class="font-header text-xl font-bold mt-3">
+            I am ready for work.
+          </h2>
+          <p>
+            Please let me know about any oppportunies you have using the form
+            below.
+          </p>
         </div>
 
-        <div>
-          <label for="phone">Phone</label>
-          <input name="phone" type="text" id="phone" />
-        </div>
+        <form class="w-full max-w-lg self-center mt-5" id="contact-form">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="font-header font-semibold text-lg underline decoration-orange underline-offset-4 mb-4 ml-1"
+                for="grid-first-name"
+              >
+                Name
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white mt-1"
+                id="grid-first-name"
+                type="text"
+              />
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="font-header font-semibold text-lg underline decoration-orange underline-offset-4 mb-4 ml-1"
+                for="grid-last-name"
+              >
+                Company
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
+                id="grid-last-name"
+                type="text"
+              />
+            </div>
 
-        <div>
-          <label name="email">Email</label>
-          <input name="email" type="text" id="email" required />
-        </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="font-header font-semibold text-lg underline decoration-orange underline-offset-4 mb-4 ml-1"
+                for="grid-role"
+              >
+                Role
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
+                id="grid-last-name"
+                type="text"
+              />
+            </div>
 
-        <div>
-          <label for="comment">Message</label>
-          <input name="comment" type="text" id="comment" />
-        </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="font-header font-semibold text-lg underline decoration-orange underline-offset-4 mb-4 ml-1"
+                for="grid-language"
+              >
+                Required Languages
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mt-1"
+                id="grid-last-name"
+                type="text"
+              />
+            </div>
+          </div>
+        </form>
 
-        <button type="submit">Contact Me!</button>
-      </form>
+        <button type="submit" class="self-center" form="contact-form">
+          <p class="rounded-full bg-skyblue p-3 pl-5 pr-5 mb-3">Submit</p>
+        </button>
+      </div>
     </div>
 
     <!-- FOOTER -->
-    <footer class="flex content-center align-middle justify-center mt-12 mb-6">
-      <ul>
-        <li>This is a footer item</li>
-        <form
-          class="flex items-center cursor-pointer"
-          method="get"
-          action="/downloadCv"
+    <footer class="flex content-center justify-between mt-20 mb-6">
+      <p>This is a footer item</p>
+      <form
+        class="flex items-center cursor-pointer"
+        method="get"
+        action="/downloadCv"
+      >
+        <button
+          type="submit"
+          class="flex flex-col items-center content-center mr-5"
         >
-          <button
-            type="submit"
-            class="flex flex-col items-center content-center mr-5"
-          >
-            <img src="./assets/icons/box-arrow-down.svg" width="40" />
-          </button>
-        </form>
+          <img src="./assets/icons/box-arrow-down.svg" width="40" />
+        </button>
+      </form>
 
-        <li>And so is this...</li>
-      </ul>
+      <p>And so is this...</p>
     </footer>
   </body>
 </html>

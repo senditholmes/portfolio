@@ -1,0 +1,6 @@
+STYLE GRIDS:
+- make repo links look like links []
+- adjust sizing with an elipsis cut off that expands []
+- make every section the size of one screen (look at the screen snapping into view?) []
+- enter footer text []
+- add download CV right next to name []

@@ -41,9 +41,6 @@ app.post("/contact", (req, res) => {
 app.get("/downloadCv", (req, res) => {
     res.download("./public/assets/filesToSend/SoftwareCV.pdf");
 });
-app.post("/message", (req, res) => {
-    return;
-});
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
