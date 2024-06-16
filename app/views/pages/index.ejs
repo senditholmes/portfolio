@@ -88,61 +88,65 @@
       </ul>
     </nav>
 
-    <!-- DISPLAY GRID -->
-    <div id="display-content" class="flex flex-col gap-8">
-      <!-- HERO SECTION -->
-      <div class="flex flex-col">
-        <h1 class="flex self-center font-main font-extrabold text-6xl mt-10">
-          Daniel J Holmes
-        </h1>
-        <h2
-          class="flex self-center font-header font-semibold text-xl underline decoration-orange underline-offset-4 mb-5"
-        >
-          Fullstack Developer | Software Engineer
-        </h2>
-      </div>
-
-      <!-- ABOUT SECTION-->
-      <div class="grid grid-cols-4 grid-rows-6">
-        <div
-          class="col-start-2 col-end-4 row-start-1 row-end-5 items-center justify-center text-center rounded-md border-2 border-skyblue"
-        >
-          Hello picture
+    <!-- DISPLAY CONTAINER -->
+    <div id="display-content" class="flex flex-col gap-8 snap-y snap-mandatory">
+      <!-- HERO AND ABOUT SECTION -->
+      <div class="flex-flex-col snap-start h-screen">
+        <div class="flex flex-col">
+          <h1 class="flex self-center font-main font-extrabold text-6xl mt-10">
+            Daniel J Holmes
+          </h1>
+          <h2
+            class="flex self-center font-header font-semibold text-xl underline decoration-orange underline-offset-4 mb-5"
+          >
+            Fullstack Developer | Educator
+          </h2>
         </div>
 
-        <div class="col-start-1 col-span-1 row-start-1">
-          <h3 class="font-header text-xl font-bold">Frontend</h3>
-          <p>I build websites using all the main frontend technologies.</p>
-          <p>HTML5, CSS, JS, TypeScript, React, HTMX</p>
-        </div>
+        <!-- BIO -->
+        <div class="grid grid-cols-4 grid-rows-4">
+          <div
+            class="col-start-2 col-end-4 row-start-1 row-end-5 items-center justify-center text-center rounded-md border-2 border-skyblue"
+          >
+            Hello picture
+          </div>
 
-        <div class="col-start-4 col-span-1 row-start-2 text-right">
-          <h3 class="font-header text-xl font-bold">Backend</h3>
-          <p>I manage the server side logic with popular backend frameworks.</p>
-          <p>Node, NPM, Django, SQL.</p>
-        </div>
+          <div class="col-start-1 col-span-1 row-start-1">
+            <h3 class="font-header text-xl font-bold">Frontend</h3>
+            <p>I build websites using all the main frontend technologies.</p>
+            <p>HTML5, CSS, JS, TypeScript, React, HTMX</p>
+          </div>
 
-        <div class="col-start-1 col-span-1 row-start-3">
-          <h3 class="font-header text-xl font-bold">General Programming</h3>
-          <p>
-            I understand version control, algorithms, data structures, and
-            different programming approaches.
-          </p>
-          <p>
-            Github, CLI, Python (Pandas), CS5O, Google Data Analytics, IBM Data
-            Analytics
-          </p>
-        </div>
+          <div class="col-start-4 col-span-1 row-start-2 text-right">
+            <h3 class="font-header text-xl font-bold">Backend</h3>
+            <p>
+              I manage the server side logic with popular backend frameworks.
+            </p>
+            <p>Node, NPM, Django, SQL.</p>
+          </div>
 
-        <div class="col-start-4 col-span-1 row-start-4 text-right">
-          <h3 class="font-header text-xl font-bold">Teaching Professional</h3>
-          <p>I am a certified teacher with 6 years of experience.</p>
-          <p>TEFL, TESOL, PGCE</p>
+          <div class="col-start-1 col-span-1 row-start-3">
+            <h3 class="font-header text-xl font-bold">General Programming</h3>
+            <p>
+              I understand version control, algorithms, data structures, and
+              different programming approaches.
+            </p>
+            <p>
+              Github, CLI, Python (Pandas), CS5O, Google Data Analytics, IBM
+              Data Analytics
+            </p>
+          </div>
+
+          <div class="col-start-4 col-span-1 row-start-4 text-right">
+            <h3 class="font-header text-xl font-bold">Teaching Professional</h3>
+            <p>I am a certified teacher with 6 years of experience.</p>
+            <p>TEFL, TESOL, PGCE</p>
+          </div>
         </div>
       </div>
 
       <!-- REPOS -->
-      <div>
+      <div class="snap-start h-screen">
         <h2 class="font-main text-4xl font-bold mt-32 text-center pb-10">
           Take a look at some of my repos. Good, bad and the ugly!
         </h2>
@@ -170,7 +174,7 @@
       </div>
 
       <!-- FORM -->
-      <div class="flex justify-between">
+      <div class="flex justify-between h-screen snap-start">
         <div class="flex flex-col justify-center self-center">
           <h2 class="font-header text-4xl font-bold mt-3">
             I am ready for work.
@@ -250,7 +254,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="flex content-center justify-between mt-20 mb-6">
+    <footer class="flex content-center justify-between mt-10 mb-6">
       <p class="text-lg">Daniel Holmes 2024 &copy;</p>
 
       <div class="flex gap-2">
