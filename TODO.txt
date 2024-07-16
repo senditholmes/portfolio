@@ -1,12 +1,12 @@
 TODO:
 
 Add hero placeholder picture []
-Add correct spacing between website parts []
+Add correct spacing between website parts [X]
 Add correct styling to form []
 Add message field onto form []
 Allow for multiple language selections []
-
-
+Add CSS to softsnapscroll onto each section []
 
 Add JS to expand descriptions of each skill []
-Add JS to softsnapscroll onto each section []
+
+Allow submission of form into format to server []
