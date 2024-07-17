@@ -9,23 +9,10 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
-  <body class="font-body ml-24 mr-24">
+  <body class="font-body ml-28 mr-28">
     <!-- NAVBAR -->
-    <nav class="flex p-5 font-primary font-bold font-header">
-      <ul class="flex flex-1 align-middle content-center items-center gap-5">
-        <li>
-          <img
-            class="cursor-pointer"
-            src="./assets/images/frowning.png"
-            width="150"
-            height="150"
-          />
-        </li>
-
-        <li class="flex mr-auto rounded-full bg-skyblue p-3">
-          Current Project | Current App
-        </li>
-
+    <nav class="flex p-5 font-primary font-bold font-header mt-10">
+      <ul class="flex align-middle content-center gap-5">
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -89,11 +76,11 @@
     </nav>
 
     <!-- DISPLAY CONTAINER -->
-    <div id="display-content" class="flex flex-col gap-8 snap-y snap-mandatory">
+    <div id="display-content" class="flex flex-col gap-8">
       <!-- HERO AND ABOUT SECTION -->
-      <div class="flex-flex-col h-screen snap-start">
+      <div class="flex-flex-col h-screen">
         <div class="flex flex-col">
-          <h1 class="flex self-center font-main font-extrabold text-6xl mt-10">
+          <h1 class="flex self-center font-main font-extrabold text-6xl">
             Daniel J Holmes
           </h1>
           <h2
@@ -103,12 +90,12 @@
           </h2>
         </div>
 
-        <!-- BIO -->
+        <!-- BIO MAIN GRID-->
         <div class="grid grid-cols-4 grid-rows-4">
           <div
-            class="col-start-2 col-end-4 row-start-1 row-end-5 items-center justify-center text-center rounded-md border-2 border-skyblue"
+            class="flex col-start-2 col-end-4 row-start-1 row-end-5 justify-center items-center content-center"
           >
-            Hello picture
+            <img src="./assets/images/frowning.png" height="250" width="250" />
           </div>
 
           <div class="col-start-1 col-span-1 row-start-1">
@@ -146,7 +133,7 @@
       </div>
 
       <!-- REPOS -->
-      <div class="h-screen snap-start">
+      <div class="h-screen">
         <h2 class="font-main text-4xl font-bold mt-32 text-center pb-10">
           Take a look at some of my repos. Good, bad and the ugly!
         </h2>
@@ -174,14 +161,13 @@
       </div>
 
       <!-- FORM -->
-      <div class="flex justify-between h-screen snap-start">
+      <div class="flex justify-between h-screen">
         <div class="flex flex-col justify-center self-center">
           <h2 class="font-header text-4xl font-bold mt-3">
             I am ready for work.
           </h2>
           <p class="text-xl">
-            Please let me know about any oppportunies you have using the form
-            below.
+            Please let me know about any oppportunies you have using this form.
           </p>
         </div>
 

@@ -625,16 +625,12 @@ video {
   margin-left: 0.25rem;
 }
 
-.ml-24{
-  margin-left: 6rem;
+.ml-28{
+  margin-left: 7rem;
 }
 
-.mr-24{
-  margin-right: 6rem;
-}
-
-.mr-auto{
-  margin-right: auto;
+.mr-28{
+  margin-right: 7rem;
 }
 
 .mt-1{
@@ -643,10 +639,6 @@ video {
 
 .mt-10{
   margin-top: 2.5rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
 }
 
 .mt-3{
@@ -661,10 +653,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-40{
-  margin-top: 10rem;
-}
-
 .block{
   display: block;
 }
@@ -675,10 +663,6 @@ video {
 
 .grid{
   display: grid;
-}
-
-.h-svh{
-  height: 100svh;
 }
 
 .h-screen{
@@ -701,22 +685,6 @@ video {
   cursor: pointer;
 }
 
-.snap-y{
-  scroll-snap-type: y var(--tw-scroll-snap-strictness);
-}
-
-.snap-mandatory{
-  --tw-scroll-snap-strictness: mandatory;
-}
-
-.snap-start{
-  scroll-snap-align: start;
-}
-
-.snap-center{
-  scroll-snap-align: center;
-}
-
 .appearance-none{
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -725,10 +693,6 @@ video {
 
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid-rows-6{
-  grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
 .grid-rows-4{
@@ -773,22 +737,6 @@ video {
 
 .self-center{
   align-self: center;
-}
-
-.overflow-scroll{
-  overflow: scroll;
-}
-
-.overflow-y-scroll{
-  overflow-y: scroll;
-}
-
-.scroll-smooth{
-  scroll-behavior: smooth;
-}
-
-.\!scroll-smooth{
-  scroll-behavior: smooth !important;
 }
 
 .truncate{
