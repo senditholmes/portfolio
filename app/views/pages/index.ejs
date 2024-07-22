@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +9,14 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
-  <body class="font-body ml-28 mr-28">
+  <body class="font-body ml-28 mr-28" id="landing">
     <!-- NAVBAR -->
-    <nav class="flex p-5 font-primary font-bold font-header mt-10">
+    <nav class="flex p-5 font-primary font-bold font-header">
+      <!-- NAV WEBSITE ICONS-->
       <ul
-        class="flex justify-center align-baseline gap-5 rounded-full border-2 border-orange p-5"
+        class="flex justify-center align-baseline gap-5 rounded-full border-2 p-5"
       >
-        <li>
+        <li class="rounded-full hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -31,7 +32,7 @@
           </svg>
         </li>
 
-        <li>
+        <li class="rounded-full hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -47,7 +48,7 @@
           </svg>
         </li>
 
-        <li>
+        <li class="rounded-full hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
@@ -63,7 +64,7 @@
             />
           </svg>
         </li>
-        <li>
+        <li class="rounded-full hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
@@ -80,7 +81,7 @@
           </svg>
         </li>
 
-        <li>
+        <li class="rounded-full hover:shadow-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
@@ -96,26 +97,49 @@
           </svg>
         </li>
       </ul>
-
+      <!---LINKS TO PAGE SECTIONS-->
       <ul
-        class="flex gap-5 ml-auto text-2xl rounded-full border-2 border-orange justify-center align-baseline items-center pl-5 pr-5"
+        class="flex gap-5 ml-auto text-2xl rounded-full border-2 justify-center align-baseline items-center pl-5 pr-5"
       >
-        <li><a href="#" class="mt-1">About Me</a></li>
-        <li><a href="#" class="mt-1">Projects</a></li>
-        <li><a href="#" class="mt-1">Contact Me</a></li>
+        <li>
+          <a href="#landing" class="mt-1 hover:underline decoration-skyblue"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#aboutme-section"
+            class="mt-1 hover:underline decoration-skyblue"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a
+            href="#repo-section"
+            class="mt-1 hover:underline decoration-skyblue"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact-form-section"
+            class="mt-1 hover:underline decoration-skyblue"
+            >Contact Me</a
+          >
+        </li>
       </ul>
     </nav>
 
-    <!-- DISPLAY CONTAINER -->
-    <div id="display-content" class="flex flex-col gap-8 mt-5">
+    <!-- LANDING CONTENT-->
+    <div class="flex flex-col gap-8 mt-5">
       <!-- HERO AND ABOUT SECTION -->
       <div class="flex-flex-col h-screen">
         <div class="flex flex-col">
-          <h1 class="flex self-center font-main font-extrabold text-6xl p-5">
+          <h1 class="flex self-center font-main font-extrabold text-8xl p-5">
             Daniel J Holmes
           </h1>
           <h2
-            class="flex self-center font-header font-semibold text-xl underline decoration-orange underline-offset-4 mb-5"
+            class="flex self-center font-header font-semibold text-4xl underline decoration-orange underline-offset-4 mb-8"
           >
             Fullstack Developer | Educator
           </h2>
@@ -132,22 +156,16 @@
           <div class="col-start-1 col-span-1 row-start-1">
             <h3 class="font-header text-3xl font-bold">Frontend</h3>
             <p>I build websites.</p>
-            <p>HTML5, CSS, JS, TypeScript, React, HTMX</p>
           </div>
 
           <div class="col-start-4 col-span-1 row-start-2 text-right">
             <h3 class="font-header text-3xl font-bold">Backend</h3>
             <p>I implement server side logic.</p>
-            <p>Node, NPM, Django, SQL.</p>
           </div>
 
           <div class="col-start-1 col-span-1 row-start-3">
             <h3 class="font-header text-3xl font-bold">General Programming</h3>
             <p>I understand the industry.</p>
-            <p>
-              Github, CLI, Python (Pandas), CS5O, Google Data Analytics, IBM
-              Data Analytics
-            </p>
           </div>
 
           <div class="col-start-4 col-span-1 row-start-4 text-right">
@@ -155,13 +173,19 @@
               Teaching Professional
             </h3>
             <p>I educate others.</p>
-            <p>TEFL, TESOL, PGCE</p>
           </div>
         </div>
       </div>
 
+      <div
+        class="h-screen flex justify-center items-center"
+        id="aboutme-section"
+      >
+        <h2 class="font-main text-8xl">About me</h2>
+      </div>
+
       <!-- REPOS -->
-      <div class="h-screen">
+      <div class="h-screen" id="repo-section">
         <h2 class="font-main text-4xl font-bold mt-32 text-center pb-10">
           Take a look at some of my repos. Good, bad and the ugly!
         </h2>
@@ -189,7 +213,10 @@
       </div>
 
       <!-- FORM -->
-      <div class="flex justify-between h-screen gap-10">
+      <div
+        class="flex justify-between h-screen gap-10"
+        id="contact-form-section"
+      >
         <div class="flex flex-col justify-center self-center">
           <h2 class="font-header text-4xl font-bold mt-3">
             I am ready for work.

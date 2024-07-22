@@ -624,6 +624,10 @@ video {
   margin-left: 7rem;
 }
 
+.ml-4{
+  margin-left: 1rem;
+}
+
 .ml-auto{
   margin-left: auto;
 }
@@ -656,12 +660,8 @@ video {
   margin-top: 1.5rem;
 }
 
-.ml-6{
-  margin-left: 1.5rem;
-}
-
-.ml-4{
-  margin-left: 1rem;
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .block{
@@ -748,6 +748,10 @@ video {
 
 .self-center{
   align-self: center;
+}
+
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 
 .truncate{
@@ -860,10 +864,6 @@ video {
   padding-top: 2.5rem;
 }
 
-.pt-1{
-  padding-top: 0.25rem;
-}
-
 .text-center{
   text-align: center;
 }
@@ -905,6 +905,11 @@ video {
 
 .text-6xl{
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -958,6 +963,20 @@ video {
 .ring-skyblue{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(145 183 217 / var(--tw-ring-opacity));
+}
+
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
+.hover\:decoration-skyblue:hover{
+  text-decoration-color: #91B7D9;
+}
+
+.hover\:shadow-lg:hover{
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:ring-2:hover{
