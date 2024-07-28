@@ -22,7 +22,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 } satisfies Config;
 
 // npx tailwindcss -i ./app/public/css/input.css -o ./app/public/css/output.css --watch

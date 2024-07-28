@@ -9,9 +9,9 @@
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   </head>
 
-  <body class="font-body ml-28 mr-28" id="landing">
+  <body class="font-body" id="landing">
     <!-- NAVBAR -->
-    <nav class="flex p-5 font-primary font-bold font-header">
+    <nav class="flex p-5 font-primary font-bold font-header ml-20 mr-20">
       <!-- NAV WEBSITE ICONS-->
       <ul
         class="flex justify-center align-baseline gap-5 rounded-full border-2 p-5"
@@ -93,10 +93,10 @@
       </ul>
     </nav>
 
-    <!-- LANDING CONTENT-->
+    <!-- MAIN CONTAINER -->
     <div class="flex flex-col gap-8">
-      <!-- HERO AND ABOUT SECTION -->
-      <div class="flex-flex-col h-screen">
+      <!-- LANDING  -->
+      <div class="flex-flex-col h-screen ml-20 mr-20">
         <div class="flex flex-col">
           <h1 class="flex self-center font-main font-extrabold text-6xl p-5">
             Daniel J Holmes
@@ -108,7 +108,7 @@
           </h2>
         </div>
 
-        <!-- BIO MAIN GRID-->
+        <!-- HERO GRID -->
         <div class="grid grid-cols-4 grid-rows-4 mt-5">
           <div
             class="flex col-start-2 col-end-4 row-start-1 row-end-5 justify-center items-center content-center"
@@ -185,29 +185,89 @@
         </div>
       </div>
 
+      <!----- ABOUT ME SECTION------->
+
       <div
-        class="h-screen flex flex-col justify-center items-center"
+        class="h-screen max-h-screen overflow-y-hidden flex flex-col gap-5 ml-20 mr-20"
         id="aboutme-section"
       >
-        <h2 class="font-main text-8xl p-5">About me</h2>
-        <p>Hello, I'm Dan. Nice to meet you.</p>
-        <p>
-          I'm a junior developer currently on a journey to learn everything
-          there is to know about full-stack development.
-        </p>
-        <p>
-          I enjoy creating dynamic apps with frontend technologies such as React
-          and also organizing the back-end server-side logic, too.
-        </p>
-        <p>
-          The problem solving aspect of software development is really addicting
-          for me, figuring out how to do something really gives me a sense of
-          achivement.
-        </p>
-        <p>
-          Take a look at my projects and contact me on the form below, I look
-          forward to hearing from you soon.
-        </p>
+        <div class="overflow-y-scroll scrollbar-hide">
+          <h2 class="font-main text-8xl">About me</h2>
+          <div class="text-xl">
+            <p class="leading-loose">
+              I'm a junior developer currently on a journey to learn as much as
+              possible about software engineering. After years of working within
+              the language learning industry I naturally gravitated towards
+              learning computer languages.
+            </p>
+
+            <p class="leading-loose">
+              I can create a fullstack CRUD app, or a meme-esque tool for
+              calculating the best deal possible for your Tesco Meal Deal.
+            </p>
+          </div>
+          <p class="leading-loose text-2xl font-bold">
+            As long as I am using my code to solve problems and have fun, I am
+            golden.
+          </p>
+
+          <h2 class="font-main text-8xl">About me</h2>
+          <div class="text-xl">
+            <p class="leading-loose">
+              I'm a junior developer currently on a journey to learn as much as
+              possible about software engineering. After years of working within
+              the language learning industry I naturally gravitated towards
+              learning computer languages.
+            </p>
+
+            <p class="leading-loose">
+              I can create a fullstack CRUD app, or a meme-esque tool for
+              calculating the best deal possible for your Tesco Meal Deal.
+            </p>
+          </div>
+          <p class="leading-loose text-2xl font-bold">
+            As long as I am using my code to solve problems and have fun, I am
+            golden.
+          </p>
+
+          <h2 class="font-main text-8xl">About me</h2>
+          <div class="text-xl">
+            <p class="leading-loose">
+              I'm a junior developer currently on a journey to learn as much as
+              possible about software engineering. After years of working within
+              the language learning industry I naturally gravitated towards
+              learning computer languages.
+            </p>
+
+            <p class="leading-loose">
+              I can create a fullstack CRUD app, or a meme-esque tool for
+              calculating the best deal possible for your Tesco Meal Deal.
+            </p>
+          </div>
+          <p class="leading-loose text-2xl font-bold">
+            As long as I am using my code to solve problems and have fun, I am
+            golden.
+          </p>
+
+          <h2 class="font-main text-8xl">About me</h2>
+          <div class="text-xl">
+            <p class="leading-loose">
+              I'm a junior developer currently on a journey to learn as much as
+              possible about software engineering. After years of working within
+              the language learning industry I naturally gravitated towards
+              learning computer languages.
+            </p>
+
+            <p class="leading-loose">
+              I can create a fullstack CRUD app, or a meme-esque tool for
+              calculating the best deal possible for your Tesco Meal Deal.
+            </p>
+          </div>
+          <p class="leading-loose text-2xl font-bold">
+            As long as I am using my code to solve problems and have fun, I am
+            golden.
+          </p>
+        </div>
       </div>
 
       <!-- REPOS -->
@@ -216,7 +276,7 @@
           Take a look at some of my repos. Good, bad and the ugly!
         </h2>
 
-        <ul class="grid grid-cols-4 gap-5 pt-10 pb-10 mb-52">
+        <ul class="grid grid-cols-4 gap-5 pt-10 pb-10 mb-52 ml-20 mr-20">
           <% repos.forEach((repo)=> { %>
 
           <a href="<%= repo.url %>" target="#">
@@ -238,9 +298,9 @@
         </ul>
       </div>
 
-      <!-- FORM -->
+      <!-- CONTACT SECTION -->
       <div
-        class="flex justify-between h-screen gap-10"
+        class="flex justify-between h-screen gap-10 ml-20 mr-20"
         id="contact-form-section"
       >
         <div class="flex flex-col justify-center self-center">
@@ -252,6 +312,7 @@
           </p>
         </div>
 
+        <!-- FORM -->
         <form
           class="self-center mt-5 border-solid border-2 border-sky-500 rounded px-10 py-10"
           id="contact-form "
@@ -321,7 +382,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="flex content-center justify-between mt-6 mb-6">
+    <footer class="flex content-center justify-between mt-6 mb-6 ml-20 mr-20">
       <p class="text-lg">Daniel Holmes 2024 &copy;</p>
 
       <div class="flex gap-2">
