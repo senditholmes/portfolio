@@ -1,12 +1,13 @@
-TODO:
+LANDING:
+- ENSURE PAGE LOADS AT TOP OF SCREEN
+- ANIMATE IN OUR SECTIONS WHEN PAGE LOADS
 
-Add hero placeholder picture []
-Add correct spacing between website parts [X]
-Add correct styling to form []
-Add message field onto form []
-Allow for multiple language selections []
-Add CSS to softsnapscroll onto each section []
+ANIMATIONS
+- CHECK SCRIPTS FILE
 
-Add JS to expand descriptions of each skill []
+DOCUMENTS
+- UPDATE CV TO BE DOWNLOADED
+- ADD DOWNLOAD BUTTON TO MENU
 
-Allow submission of form into format to server []
+FORM 
+- CHECK ID ERRORS ETC

@@ -656,6 +656,10 @@ video {
   margin-right: 2.5rem;
 }
 
+.mb-20{
+  margin-bottom: 5rem;
+}
+
 .block{
   display: block;
 }
@@ -748,6 +752,10 @@ video {
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .self-center{
