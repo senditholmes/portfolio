@@ -11,17 +11,17 @@
 
   <body class="font-body" id="landing">
     <!-- NAVBAR -->
-    <nav class="flex p-5 font-primary font-bold font-header ml-24 mr-24">
+    <nav class="flex p-10 font-primary font-bold font-header ml-24 mr-24">
       <!-- NAV WEBSITE ICONS-->
-      <ul
-        class="flex justify-center align-baseline gap-5 rounded-full border-2 p-5"
-      >
-        <li class="rounded-full hover:shadow-lg">
+      <ul class="flex justify-center gap-5 rounded-full border-2 p-5">
+        <li
+          class="self-center transform ease-in-out duration-500 hover:scale-125"
+        >
           <a href="https://github.com/senditholmes" target="_blank"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
+              width="50"
+              height="50"
               fill="currentColor"
               viewBox="0 0 16 16"
               class="cursor-pointer"
@@ -34,13 +34,15 @@
           </a>
         </li>
 
-        <li class="rounded-full hover:shadow-lg">
+        <li
+          class="self-center transform ease-in-out duration-500 hover:scale-125"
+        >
           <a href="https://leetcode.com/u/senditholmes/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#000000"
-              width="40px"
-              height="40px"
+              width="50px"
+              height="50px"
               viewBox="0 0 24 24"
               class="cursor-pointer"
               role="img"
@@ -53,7 +55,9 @@
           </a>
         </li>
 
-        <li class="rounded-full hover:shadow-lg">
+        <li
+          class="self-center transform ease-in-out duration-500 hover:scale-125"
+        >
           <a
             href="https://www.linkedin.com/in/daniel-h-6234402a1/"
             target="_blank"
@@ -62,8 +66,8 @@
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 50"
               class="cursor-pointer"
-              width="40px"
-              height="40px"
+              width="50px"
+              height="50px"
               role="img"
             >
               <title>LinkedIn Icon</title>
@@ -74,7 +78,9 @@
           </a>
         </li>
 
-        <li class="text-2xl self-center">
+        <li
+          class="text-2xl self-center bg-skyblue rounded-full transition-all transform hover:bg-sky-200 ease-in delay-75 duration-300 hover:scale-105 cursor-pointer p-5"
+        >
           <a href="/assets/filesToSend/danieljamesholmes-resume.pdf" download>
             Download CV
           </a>
@@ -84,24 +90,20 @@
       <ul
         class="flex gap-5 ml-auto text-2xl rounded-full border-2 justify-center align-baseline items-center pl-5 pr-5"
       >
-        <li>
-          <a href="#aboutme" class="mt-1 hover:underline decoration-skyblue"
-            >About Me</a
-          >
+        <li
+          class="bg-skyblue rounded-full p-5 transition-all transform hover:bg-sky-200 ease-in duration-300 hover:scale-110 cursor-pointer"
+        >
+          <a href="#aboutme" class="mt-1">About Me</a>
         </li>
-        <li>
-          <a
-            href="#repo-section"
-            class="mt-1 hover:underline decoration-skyblue"
-            >Projects</a
-          >
+        <li
+          class="bg-skyblue rounded-full p-5 transition-all transform hover:bg-sky-200 ease-in duration-300 hover:scale-110 cursor-pointer"
+        >
+          <a href="#repo-section" class="mt-1">Projects</a>
         </li>
-        <li>
-          <a
-            href="#contact-form-section"
-            class="mt-1 hover:underline decoration-skyblue"
-            >Contact Me</a
-          >
+        <li
+          class="bg-skyblue rounded-full p-5 transition-all transform hover:bg-sky-200 ease-in duration-300 hover:scale-110 cursor-pointer"
+        >
+          <a href="#contact-form-section" class="mt-1">Contact Me</a>
         </li>
       </ul>
     </nav>
@@ -111,11 +113,13 @@
       <!-- LANDING  -->
       <div class="flex-flex-col h-screen ml-20 mr-20">
         <div class="flex flex-col">
-          <h1 class="flex self-center font-main font-bold text-8xl p-5 mt-5">
+          <h1
+            class="flex self-center font-main font-bold text-8xl p-5 transform hover:scale-125 ease-in-out duration-1000"
+          >
             Daniel J Holmes
           </h1>
           <h2
-            class="flex self-center font-header font-semibold text-4xl underline decoration-orange underline-offset-4 mb-8"
+            class="flex self-center font-header font-semibold text-5xl underline decoration-orange underline-offset-4 mb-8"
           >
             Fullstack Developer | Educator
           </h2>
@@ -129,7 +133,9 @@
             <img src="./assets/images/frowning.png" height="250" width="250" />
           </div>
 
-          <div class="col-start-1 col-span-1 row-start-1">
+          <div
+            class="col-start-1 col-span-1 row-start-1 rounded-lg border-2 p-5"
+          >
             <h3 class="font-header text-3xl font-bold text-center p-2">
               Frontend
             </h3>
@@ -146,7 +152,9 @@
             </div>
           </div>
 
-          <div class="col-start-4 col-span-1 row-start-1 text-right">
+          <div
+            class="col-start-4 col-span-1 row-start-1 text-right rounded-lg border-2 p-5"
+          >
             <h3 class="font-header text-3xl font-bold text-center p-2">
               Backend
             </h3>
@@ -160,7 +168,9 @@
             </div>
           </div>
 
-          <div class="col-start-1 col-span-1 row-start-3">
+          <div
+            class="col-start-1 col-span-1 row-start-3 rounded-lg border-2 p-5"
+          >
             <h3 class="font-header text-3xl font-bold text-center p-2">
               General Programming
             </h3>
@@ -186,7 +196,7 @@
           </div>
 
           <div
-            class="col-start-4 col-span-1 row-start-3 text-center p-2 content-center"
+            class="col-start-4 col-span-1 row-start-3 text-center content-center rounded-lg border-2 p-5"
           >
             <h3 class="font-header text-3xl font-bold">
               Teaching Professional
@@ -199,31 +209,18 @@
       </div>
 
       <!----- ABOUT ME SECTION------->
-      <div class="ml-20 mr-20 pt-10 flex flex-col" id="aboutme">
-        <div class="mb-52">
+      <div class="ml-20 mr-20 pt-10 flex flex-col gap-52" id="aboutme">
+        <div class="transform ease-in-out duration-300" id="nicetomeetyou">
           <h2 class="font-main text-6xl mb-5">Nice to meet you...</h2>
-          <div class="text-xl">
-            <p class="leading-loose">
-              I'm a junior developer currently on a journey to learn as much as
-              possible about software engineering.
-            </p>
-            <p class="leading-loose">
-              After years of working within the language learning industry I
-              naturally gravitated towards learning computer languages.
-            </p>
-
-            <p class="leading-loose">
-              I can create a fullstack CRUD app, or a meme-esque tool for
-              calculating the best deal possible for your Tesco Meal Deal.
+          <div>
+            <p class="text-4xl leading-loose">
+              I'm a junior developer learning as much as possible about software
+              engineering.
             </p>
           </div>
-          <p class="leading-loose text-2xl font-bold mt-5">
-            As long as I am using my code to solve problems and have fun, I am
-            golden.
-          </p>
         </div>
 
-        <div class="mb-52 text-right">
+        <div class="text-right" id="educator">
           <h2 class="font-main text-6xl mb-5">...educator turned engineer</h2>
           <div class="text-xl">
             <p class="leading-loose">
@@ -239,7 +236,7 @@
           </p>
         </div>
 
-        <div class="mb-52">
+        <div class="" id="teamup">
           <h2 class="font-main text-6xl mb-5">...lets team up!</h2>
           <div class="text-xl">
             <p class="leading-loose">
