@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tailwind-setup": "tailwindcss -i ./app/public/css/input.css -o ./app/public/css/output.css --watch",
-    "typescript-setup": "tsc -watch"
+    "tailwind": "tailwindcss -i ./app/public/css/input.css -o ./app/public/css/output.css --watch",
+    "typescript": "tsc -watch"
   },
   "keywords": [],
   "author": "",
