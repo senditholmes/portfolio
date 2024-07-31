@@ -11,7 +11,7 @@
 
   <body class="font-body" id="landing">
     <!-- NAVBAR -->
-    <nav class="flex p-10 font-primary font-bold font-header ml-24 mr-24">
+    <nav class="flex p-10 font-primary font-bold font-header ml-18 mr-18">
       <!-- NAV WEBSITE ICONS-->
       <ul class="flex justify-center gap-5 rounded-full border-2 p-5">
         <li
@@ -119,7 +119,7 @@
             Daniel J Holmes
           </h1>
           <h2
-            class="flex self-center font-header font-semibold text-5xl underline decoration-orange underline-offset-4 mb-8"
+            class="flex self-center font-header font-semibold text-4xl underline decoration-orange underline-offset-4 mb-8"
           >
             Fullstack Developer | Educator
           </h2>
@@ -128,81 +128,97 @@
         <!-- HERO GRID -->
         <div class="grid grid-cols-4 grid-rows-4 mt-5">
           <div
-            class="flex col-start-2 col-end-4 row-start-1 row-end-5 justify-center items-center content-center"
+            class="flex col-start-2 col-end-4 row-start-1 row-end-2 justify-center items-center"
           >
             <img src="./assets/images/frowning.png" height="250" width="250" />
           </div>
 
           <div
-            class="col-start-1 col-span-1 row-start-1 rounded-lg border-2 p-5"
+            class="col-start-1 col-span-1 row-start-1 rounded-lg border-2 p-5 flex flex-col justify-around"
           >
-            <h3 class="font-header text-3xl font-bold text-center p-2">
-              Frontend
-            </h3>
-            <div class="flex gap-1 justify-between">
-              <img src="./assets/images/html-icon.svg" height="50" width="50" />
-              <img src="./assets/images/css-icon.svg" height="50" width="50" />
-              <img src="./assets/images/js-icon.svg" height="50" width="50" />
-              <img src="./assets/images/ts-icon.svg" height="50" width="50" />
-              <img
-                src="./assets/images/react-js-icon.svg"
-                height="50"
-                width="50"
-              />
+            <div>
+              <h3 class="font-header text-3xl font-bold text-center">
+                Frontend
+              </h3>
+              <div class="flex gap-1 justify-between">
+                <img
+                  src="./assets/images/html-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img
+                  src="./assets/images/css-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img src="./assets/images/js-icon.svg" height="50" width="50" />
+                <img src="./assets/images/ts-icon.svg" height="50" width="50" />
+                <img
+                  src="./assets/images/react-js-icon.svg"
+                  height="50"
+                  width="50"
+                />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-header text-3xl font-bold text-center">
+                Backend
+              </h3>
+              <div class="flex gap-1 justify-around">
+                <img
+                  src="./assets/images/node-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img
+                  src="./assets/images/python-icon.svg"
+                  height="50"
+                  width="50"
+                />
+              </div>
             </div>
           </div>
 
           <div
-            class="col-start-4 col-span-1 row-start-1 text-right rounded-lg border-2 p-5"
+            class="col-start-4 col-span-1 row-start-1 text-right rounded-lg border-2 p-5 flex flex-col justify-around"
           >
-            <h3 class="font-header text-3xl font-bold text-center p-2">
-              Backend
-            </h3>
-            <div class="flex gap-1 justify-around">
-              <img src="./assets/images/node-icon.svg" height="50" width="50" />
-              <img
-                src="./assets/images/python-icon.svg"
-                height="50"
-                width="50"
-              />
+            <div>
+              <h3 class="font-header text-3xl font-bold text-center">
+                General Programming
+              </h3>
+              <div class="flex gap-1 justify-between">
+                <p class="self-center text-2xl text-red-800">CS50</p>
+                <img
+                  src="./assets/images/google-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img
+                  src="./assets/images/ibm-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img
+                  src="./assets/images/sqlite-icon.svg"
+                  height="50"
+                  width="50"
+                />
+                <img
+                  src="./assets/images/mysql-icon.svg"
+                  height="50"
+                  width="50"
+                />
+              </div>
             </div>
-          </div>
 
-          <div
-            class="col-start-1 col-span-1 row-start-3 rounded-lg border-2 p-5"
-          >
-            <h3 class="font-header text-3xl font-bold text-center p-2">
-              General Programming
-            </h3>
-            <div class="flex gap-1 justify-between">
-              <p class="self-center text-2xl text-red-800">CS50</p>
-              <img
-                src="./assets/images/google-icon.svg"
-                height="50"
-                width="50"
-              />
-              <img src="./assets/images/ibm-icon.svg" height="50" width="50" />
-              <img
-                src="./assets/images/sqlite-icon.svg"
-                height="50"
-                width="50"
-              />
-              <img
-                src="./assets/images/mysql-icon.svg"
-                height="50"
-                width="50"
-              />
-            </div>
-          </div>
-
-          <div
-            class="col-start-4 col-span-1 row-start-3 text-center content-center rounded-lg border-2 p-5"
-          >
-            <h3 class="font-header text-3xl font-bold">
-              Teaching Professional
-            </h3>
-            <div class="flex gap-1 justify-center">
-              <p>TEFL | TESOL | PGCE | TOPIK 6</p>
+            <div>
+              <h3 class="font-header text-3xl font-bold">
+                Teaching Professional
+              </h3>
+              <div class="flex gap-1 justify-center">
+                <p>TEFL | TESOL | PGCE | TOPIK 6</p>
+              </div>
             </div>
           </div>
         </div>
